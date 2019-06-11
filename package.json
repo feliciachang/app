@@ -64,7 +64,7 @@
     "babel-jest": "20.0.3",
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "babel-preset-react-native": "2.0.0",
-    "enzyme": "^3.8.0",
+    "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.9.1",
     "enzyme-to-json": "^3.3.5",
     "jest": "^24.8.0",

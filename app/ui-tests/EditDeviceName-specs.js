@@ -2,6 +2,7 @@ import React from "react";
 import EditDeviceName from "../containers/EditDeviceNameScreen";
 import { mockFunctionHelper } from "../../specs/helpers";
 
+import { View, Button } from "react-native";
 import { shallow, mount, render } from "enzyme";
 import toJson from "enzyme-to-json";
 import * as Types from "../actions/index";
@@ -30,6 +31,14 @@ let store = mockFunctionHelper({
             }
         ]
     }
+});
+
+describe.only("Set Device Name Button", () => {
+    it("simulates click event", () => {
+        const wrapper = shallow(<EditDeviceName store={store} />);
+        // expect(wrapper.find(View).length).toEqual(20);
+        expect(wrapper.find(Button).length).toEqual(2);
+    });
 });
 
 describe("<EditDeviceName/>", () => {

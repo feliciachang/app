@@ -50,16 +50,24 @@ class EditDeviceName extends React.Component {
 
     render() {
         const { deviceId, navigateEasyModeWelcome, address } = this.props;
+        console.log("rendering");
         return (
             <View>
                 <View style={{ paddingTop: 20, paddingBottom: 10 }}>
                     <TextInput style={{ height: 40, borderColor: "gray", borderWidth: 1 }} placeholder={"Device Name"} onChangeText={text => this.setState({ deviceName: text })} />
                 </View>
                 <View style={{ paddingLeft: 10, paddingRight: 10, paddingBottom: 10 }}>
-                    <Button title="Save" onPress={() => this._addData(deviceId, this.state.deviceName, address)} />
+                    <Button
+                        className="Save-Device-Name"
+                        title="Save"
+                        onPress={() => {
+                            console.log("pressed");
+                            this._addData(deviceId, this.state.deviceName, address);
+                        }}
+                    />
                 </View>
                 <View style={{ paddingLeft: 10, paddingRight: 10 }}>
-                    <Button title="Cancel" onPress={() => navigateEasyModeWelcome()} />
+                    <Button className="Cancel-Device-Name" title="Cancel" onPress={() => navigateEasyModeWelcome()} />
                 </View>
             </View>
         );
